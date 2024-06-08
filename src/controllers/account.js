@@ -6,8 +6,8 @@ const jwt = require('jsonwebtoken');
 
 class AccountController {
 	static async register(res, body) {
-		const { userName, password, fullName, emailAddress, registrationNumber } = body;
-		if (!userName || !password || !fullName || !emailAddress || !registrationNumber) {
+		const { userName, password, fullName, emailAddress } = body;
+		if (!userName || !password || !fullName || !emailAddress ) {
 			return {
 				status: "failed",
 				content: `Body data must be complete.`,

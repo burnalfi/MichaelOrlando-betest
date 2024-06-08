@@ -12,6 +12,7 @@ const app = express();
 const port = process.env.port;
 const dbPort = process.env.dbPort;
 const dbName = process.env.dbName;
+const dbUrl = process.env.dbUrl;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -28,7 +29,7 @@ app.listen(port, () => {
 	console.log(`Connecting to database on port ${dbPort}`);
 
 	mongoose
-		.connect(`mongodb://127.0.0.1:${dbPort}/${dbName}`)
+		.connect(`${dbUrl}`)
 		.then(() => {
 			console.log('Database connection established.');
 		})
