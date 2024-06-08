@@ -15,7 +15,7 @@ class AccountController {
 			}
 		}
 		const usernameCheck = await AccountLogin.AccountLoginModel.findOne({ userName: userName });
-		console.log(usernameCheck)
+
 		if (usernameCheck) return {
 			status: "failed",
 			content: "Username already exists. Please select another username.",
