@@ -5,7 +5,6 @@ const uuid = require('uuid');
 const jwt = require('jsonwebtoken');
 
 class AccountController {
-
 	static async register(res, body) {
 		const { userName, password, fullName, emailAddress, registrationNumber } = body;
 		if (!userName || !password || !fullName || !emailAddress || !registrationNumber) {
@@ -34,6 +33,11 @@ class AccountController {
 			})
 		]);
 
+		[accountLogin, userInfo] = await Promise.all([
+			AccountLogin.AccountLoginModel.findOneAndUpdate({ _id: accountLogin._id }, { userId: userInfo._id }, { new: true }),
+			UserInfo.UserInfoModel.findOneAndUpdate({ _id: userInfo._id }, { accountNumber: accountLogin._id }, { new: true })
+		]);
+
 		return res.status(201).json({
 			status: "success",
 			content: { acountLogin: accountLogin, userInfo: userInfo }
@@ -51,13 +55,19 @@ class AccountController {
 
 		const usernameCheck = await AccountLogin.AccountLoginModel.findOne({ userName: userName });
 
+		
 		if (!usernameCheck) return res.status(400).json({
 			status: "failed",
 			content: "Username or password is wrong."
 		});
 
-		await AccountLogin.AccountLoginModel.findOneAndUpdate({ userName: userName }, { lastLoginDateTime: new Date() }); 
+		let [_, userInfo] = await Promise.all([
+			AccountLogin.AccountLoginModel.findOneAndUpdate({ userName: userName }, { lastLoginDateTime: new Date() }),
+			UserInfo.UserInfoModel.findById(usernameCheck.userId.toString())
+		]);
 
+		usernameCheck._doc.userInfo = userInfo;
+		
 		if (!(await bcrypt.compare(password, usernameCheck.password))) {
 			return res.status(400).json({
 				status: "failed",
@@ -66,10 +76,10 @@ class AccountController {
 		}
 
    		const token = jwt.sign(usernameCheck.toJSON(), process.env.secret_key, {
-            expiresIn: "1h"
+            expiresIn: 1000
         });
 
-        const { iat, exp, createdAt } = jwt.decode(token);
+        const { iat, exp } = jwt.decode(token);
 
 		return res.status(201).json({
 			status: "success",
@@ -77,9 +87,8 @@ class AccountController {
 				token: token,
 				iat: iat,
 				exp: exp,
-				createdAt: createdAt
 			}
-		})
+		});
 	}
 }
 

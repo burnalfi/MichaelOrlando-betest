@@ -6,7 +6,7 @@ const AccountLoginSchema = new Schema({
 	userName: String,
 	password: String,
 	lastLoginDateTime: {type: Date, index: true},
-	userId: { type: Schema.Types.ObjectId, ref: 'user-info' }
+	userId: { type: Schema.Types.ObjectId || String, ref: 'user-info' }
 });
 
 AccountLoginSchema.set('toJSON', {

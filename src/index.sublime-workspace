@@ -1,0 +1,341 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"has",
+				"hashedPassword"
+			],
+			[
+				"Ine",
+				"InjectModel"
+			],
+			[
+				"unique",
+				"uniqueSources"
+			],
+			[
+				"API",
+				"APIMatakuliah"
+			],
+			[
+				"find",
+				"findAll"
+			],
+			[
+				"head",
+				"headers"
+			],
+			[
+				"agentPri",
+				"AgentPriorityService"
+			],
+			[
+				"parsed",
+				"parsedRow"
+			],
+			[
+				"agentPrio",
+				"agentPriorityService"
+			],
+			[
+				"Agent",
+				"AgentPriorityService"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"UI: Select Color Scheme"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 366.0,
+		"history":
+		[
+			"let add = 1 + 1;",
+			"npm run start:dev",
+			"npx nest start --watch"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/src/models/userInfo.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/src/models/accountLogin.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/src/middlewares.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/src/routes/userInfo.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/src/controllers/userInfo.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/src/controllers/account.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/src/routes/account.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/src/index.js",
+		"/C/Users/User/Documents/Orlando/Project/Portofolio Project/project_portofolio_backend/src/controllers/accounts.js",
+		"/C/Users/User/Documents/Orlando/Project/Portofolio Project/project_portofolio_backend/src/routes/accounts.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/src/controllers/accountLogin.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/package.json",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/.gitignore",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/MichaelOrlando-betest/.env",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/BTPN_test/factiorial.js",
+		"/C/Users/User/Documents/Orlando/Job Application Tests/palindrome_test/palindrome.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/api/management/invoice.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/database.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/dbapi/keranjang.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/dbapi/matakuliah.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/dbapi/invoice.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/dbapi/e_money_balance.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/api/management/eMoneyBalance.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/api/management/keranjang.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/api/management/retur.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/index.js",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/api/management/eMoneyHistory.js",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/agent-priority/utils/endpoint.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/agent-priority/service/agent-priority.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/agent-priority/controller/agent-priority.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/dto/lead-submitted-proposal.request.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/entity/lead-submitted-proposal.entity.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/service/lead-proposal.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/controller/lead.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/service/lead.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/util/string.util.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agency-campaign/service/agency-campaign-lou.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/distribution-engine/consumer/send-notification.consumer.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/dto/lead-proposal.request.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/lead_process_api/package.json",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/enum/lead-status.enum.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agent/service/agent.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/dto/lead-proposal.response.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/lead.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agency-campaign/controller/agency-campaign.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/prospect/service/prospect-master.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/enum/lead-follow-up-status.enum.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agent/dto/request/get-list-profile.request.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/package.json",
+		"/C/Users/User/Documents/Orlando/Project/BIT/integration_process_api/package.json",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/star-point/entity/hold-leads-config-log.entity.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agency-campaign/service/agency-campaign-participant.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/star-point/entity/leads-star-point-reset.entity.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/app.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/config/database/mongoose.encrypted.database.config.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/distribution-engine/distribution-engine.spec.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/dto/lead.request.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/service/lead.autodrop.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/file-upload-cache/service/provider/vn/file-upload-cache.provider.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/prospect/entity/prospect-master.entity.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/campaign/service/campaign.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/campaign/campaign.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/entity/lead.entity.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/star-point/service/leads-star-point-reset.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/service/lead.recruitment.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/dto/lead-follow-up.request.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/distribution-engine/consumer/campaign-validation.consumer.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/public_experience_api_orland/package.json",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/package.json",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/package.json",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/source/entity/source.entity.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/lead/enum/customer-type.enum.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/dto/incoming/lead-filter.incoming.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/enum/lead-tab.enum.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/service/filter.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/controller/my-campaign.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/my-lead-campaign.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/routes.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agent/controller/agent.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agent/agent.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/source/service/source.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/source/controller/source.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/resource/service/resource.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agent-lead-source/controller/agent-lead-source.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/campaign/controller/campaign.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/Edupedia/oms-uksw-be/src/dbapi/trx_keranjang.js",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/campaign/dto/request/get-list-campaign.request.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agent-lead-source/service/agent-lead-source.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/source/source.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agent-lead-source/dto/request/get-list-agent-lead-source.request.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/agent-lead-source/interface/agent-lead-source.interface.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/controller/agent-lead-dashboard.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/service/agent-lead-dashboard.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/controller/agent-lead-source.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/agent-lead-source.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/service/opportunity.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/service/follow-up-lead.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/controller/my-opportunity.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/agency-campaign/enum/campaign-type.enum.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/ranks/util/endpoint.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/service/campaign.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/my-lead-opportunity.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/agent_experience_api/src/module/lead/controller/campaign.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/star-point/service/agent-priority.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/interceptor/file.interceptor.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/lead_process_api/src/module/star-point/controller/agent-priority.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/rest/dto/request/access-log.request.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/agency-campaign/controller/campaign-approval.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/agent/agent.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/agent/dto/req/hold-leads-config-list-request.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/app.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/production/controller/production-target.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/agent/controller/agent-priority.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/agent/service/agent-priority.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/agency-campaign/dto/campaign-type-file.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/content-manager/content-manager.module.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/content-manager/content-manager.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/rest/service/rest.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/agency-campaign/service/campaign-approval.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/incentive/controller/incentive.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/jira_repo/admin_experience_api/src/module/agent/controller/adbu-hierarchy.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/agent_experience_api/src/module/agent-priority/controller/agent-priority.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/integration_process_api/src/module/lead-wab/dto/agent-priority-tnc-acceptance-notification.dto.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/integration_process_api/src/module/nurture/controller/nurture.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/integration_process_api/src/module/nurture/service/nurture.service.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/integration_process_api/src/main.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/integration_process_api/src/module/lead-wab/controller/lead-wab.controller.ts",
+		"/C/Users/User/Documents/Orlando/Project/BIT/integration_process_api/src/module/lead-wab/lead-wab.module.ts"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 134.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": false,
+		"use_buffer2": false,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 184.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 238.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

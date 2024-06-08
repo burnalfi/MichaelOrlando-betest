@@ -4,7 +4,7 @@ const { Schema, model } = mongoose;
 
 const UserInfoSchema = new Schema({
 	fullName: String,
-	accountNumber: { type: Schema.Types.ObjectId, ref: 'account-login' },
+	accountNumber: { type: Schema.Types.ObjectId || String, ref: 'account-login' },
 	emailAddress: String,
 	registrationNumber: { type: String, index: true }
 });
