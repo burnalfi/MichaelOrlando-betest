@@ -9,7 +9,7 @@ require('dotenv').config();
 
 const app = express();
 
-const port = process.env.port;
+const port = process.env.port || 3000;
 const dbPort = process.env.dbPort;
 const dbName = process.env.dbName;
 const dbUrl = process.env.dbUrl;
@@ -28,7 +28,7 @@ app.get('/ping', (req, res) => {
 	res.send('pong!');
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
 	console.log(`Connecting to database on port ${dbPort}`);
 
 	mongoose
