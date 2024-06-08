@@ -5,11 +5,13 @@ const route = express.Router();
 const userInfoController = UserInfo.UserInfoController;
 
 route.get('/account-number/:accountNumber', async (req, res) => {
-	return await userInfoController.getUserInfoByAccountNumber(res, req.params.accountNumber);
+	const response = await userInfoController.getUserInfoByAccountNumber(req.params.accountNumber);
+	return res.status(response.statusCode).json(response);
 });
 
 route.get('/registration-number/:registrationNumber', async (req, res) => {
-	return await userInfoController.getUserInfoByRegistrationNumber(res, req.params.registrationNumber);
+	const response = await userInfoController.getUserInfoByRegistrationNumber(req.params.registrationNumber);
+	return res.status(response.statusCode).json(response);
 });
 
 

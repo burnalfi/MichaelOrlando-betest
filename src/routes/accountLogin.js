@@ -5,7 +5,8 @@ const route = express.Router();
 const accountLoginController = AccountLogin.AccountLoginController;
 
 route.get('/login-time', async (req, res) => {
-	return await accountLoginController.getAccountLoginByLastLoginDate(res);
+	const response = await accountLoginController.getAccountLoginByLastLoginDate();
+	return res.status(response.statusCode).json(response);
 });
 
 const AccountLoginRoute = route;

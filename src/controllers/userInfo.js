@@ -1,32 +1,36 @@
 const UserInfo = require('../models/userInfo');
 
 class UserInfoController {
-	static async getUserInfoByAccountNumber(res, accountNumber) {
+	static async getUserInfoByAccountNumber(accountNumber) {
 		const userInfo = await UserInfo.UserInfoModel.findOne({ accountNumber: accountNumber });
 		
-		if (!userInfo) return res.status(404).json({
+		if (!userInfo) return {
 			status: "success",
-			content: "Not found."
-		});
+			content: "Not found.",
+			statusCode: 404
+		}
 		
-		return res.status(200).json({
+		return {
 			status: "success",
-			content: userInfo
-		});
+			content: userInfo,
+			statusCode: 200
+		}
 	}
 
-	static async getUserInfoByRegistrationNumber(res, registrationNumber) {
+	static async getUserInfoByRegistrationNumber(registrationNumber) {
 		const userInfo = await UserInfo.UserInfoModel.findOne({ registrationNumber: registrationNumber });
 		
-		if (!userInfo) return res.status(404).json({
+		if (!userInfo) return {
 			status: "success",
-			content: "Not found."
-		});
+			content: "Not found.",
+			statusCode: 404
+		}
 		
-		return res.status(200).json({
+		return {
 			status: "success",
-			content: userInfo
-		});
+			content: userInfo,
+			statusCode: 200
+		}
 	}
 }
 

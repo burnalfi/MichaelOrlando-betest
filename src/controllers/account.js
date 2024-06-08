@@ -8,17 +8,19 @@ class AccountController {
 	static async register(res, body) {
 		const { userName, password, fullName, emailAddress, registrationNumber } = body;
 		if (!userName || !password || !fullName || !emailAddress || !registrationNumber) {
-			return res.status(400).json({
+			return {
 				status: "failed",
-				content: `Body data must be complete.`
-			});
+				content: `Body data must be complete.`,
+				statusCode: 400
+			}
 		}
 		const usernameCheck = await AccountLogin.AccountLoginModel.findOne({ userName: userName });
 		console.log(usernameCheck)
-		if (usernameCheck) return res.status(400).json({
+		if (usernameCheck) return {
 			status: "failed",
-			content: "Username already exists. Please select another username."
-		});
+			content: "Username already exists. Please select another username.",
+			statusCode: 400
+		};
 		
 		const hashedPassword = bcrypt.hashSync(password, 10);
 		let [accountLogin, userInfo] = await Promise.all([
@@ -38,28 +40,29 @@ class AccountController {
 			UserInfo.UserInfoModel.findOneAndUpdate({ _id: userInfo._id }, { accountNumber: accountLogin._id }, { new: true })
 		]);
 
-		return res.status(201).json({
+		return {
 			status: "success",
-			content: { acountLogin: accountLogin, userInfo: userInfo }
-		})
+			content: { acountLogin: accountLogin, userInfo: userInfo },
+			statusCode: 201
+		}
 	}
 
 	static async login(res, body) {
 		const { userName, password } = body;
-		if (!userName || !password) {
-			return res.status(400).json({
+		if (!userName || !password) return {
 				status: "failed",
-				content: `userName and password must be filled.`
-			});
-		}
+				content: `userName and password must be filled.`,
+				statusCode: 400
+			};
+		
 
 		const usernameCheck = await AccountLogin.AccountLoginModel.findOne({ userName: userName });
 
-		
-		if (!usernameCheck) return res.status(400).json({
+		if (!usernameCheck) return {
 			status: "failed",
-			content: "Username or password is wrong."
-		});
+			content: "Username or password is wrong.",
+			statusCode: 400
+		};
 
 		let [_, userInfo] = await Promise.all([
 			AccountLogin.AccountLoginModel.findOneAndUpdate({ userName: userName }, { lastLoginDateTime: new Date() }),
@@ -68,12 +71,12 @@ class AccountController {
 
 		usernameCheck._doc.userInfo = userInfo;
 		
-		if (!(await bcrypt.compare(password, usernameCheck.password))) {
-			return res.status(400).json({
-				status: "failed",
-				content: `userName and password must be filled.`
-			});
-		}
+		if (!(await bcrypt.compare(password, usernameCheck.password))) return {
+			status: "failed",
+			content: `userName and password must be filled.`,
+			statusCode: 400
+		};
+		
 
    		const token = jwt.sign(usernameCheck.toJSON(), process.env.secret_key, {
             expiresIn: 1000
@@ -81,14 +84,15 @@ class AccountController {
 
         const { iat, exp } = jwt.decode(token);
 
-		return res.status(201).json({
+		return {
 			status: "success",
 			content: {
 				token: token,
 				iat: iat,
 				exp: exp,
-			}
-		});
+			},
+			statusCode: 201
+		};
 	}
 }
 
