@@ -4,6 +4,7 @@ const AccountRoute = require('./routes/account');
 const UserInfoRoute = require('./routes/userInfo');
 const AccountLoginRoute = require('./routes/accountLogin');
 const Middleware = require('./middlewares');
+const http =  require("http");
 const cors = require('cors');
 require('dotenv').config();
 
@@ -24,8 +25,8 @@ app.use('/account-login', Middleware.verifyToken, AccountLoginRoute);
 app.use('/ping', (req, res) => {
 	res.send('pong!');
 });
-
-app.listen(port, () => {
+const server = http.createServer(app)
+server.listen(port, () => {
 	console.log(`Connecting to database on port ${dbPort}`);
 
 	mongoose
