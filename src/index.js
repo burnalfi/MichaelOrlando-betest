@@ -22,8 +22,8 @@ app.use('/account', AccountRoute);
 app.use('/user-info', Middleware.verifyToken, UserInfoRoute);
 app.use('/account-login', Middleware.verifyToken, AccountLoginRoute);
 
-app.use('/ping', (req, res) => {
-	res.send('pong!');
+app.use('/', (req, res) => {
+	res.send('Test Backend Michael Orlando');
 });
 const server = http.createServer(app)
 server.listen(port, '0.0.0.0', () => {
