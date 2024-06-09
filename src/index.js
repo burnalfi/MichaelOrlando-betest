@@ -26,7 +26,7 @@ app.use('/ping', (req, res) => {
 	res.send('pong!');
 });
 const server = http.createServer(app)
-server.listen(port, () => {
+server.listen(port, '0.0.0.0', () => {
 	console.log(`Connecting to database on port ${dbPort}`);
 
 	mongoose
