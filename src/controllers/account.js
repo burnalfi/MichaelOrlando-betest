@@ -3,6 +3,8 @@ const AccountLogin = require('../models/accountLogin');
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
+const { redisClient } = require('../redisClient');
 
 class AccountController {
 	static async register(res, body) {
@@ -48,51 +50,73 @@ class AccountController {
 	}
 
 	static async login(res, body) {
-		const { userName, password } = body;
-		if (!userName || !password) return {
+		try {
+			const { userName, password } = body;
+			if (!userName || !password) return {
+					status: "failed",
+					content: `userName and password must be filled.`,
+					statusCode: 400
+				};
+			
+			const usernameCheck = await AccountLogin.AccountLoginModel.findOne({ userName: userName });
+	
+			if (!usernameCheck) return {
+				status: "failed",
+				content: "Username or password is wrong.",
+				statusCode: 400
+			};
+	
+			let [_, userInfo] = await Promise.all([
+				AccountLogin.AccountLoginModel.findOneAndUpdate({ userName: userName }, { lastLoginDateTime: new Date() }),
+				UserInfo.UserInfoModel.findById(usernameCheck.userId.toString())
+			]);
+	
+			if (!userInfo) return {
+				status: "failed",
+				content: "Account login data does not have a user-info.",
+				statusCode: 400
+			}
+	
+			usernameCheck._doc.userInfo = userInfo;
+			
+			if (!(await bcrypt.compare(password, usernameCheck.password))) return {
 				status: "failed",
 				content: `userName and password must be filled.`,
 				statusCode: 400
 			};
-		
-
-		const usernameCheck = await AccountLogin.AccountLoginModel.findOne({ userName: userName });
-
-		if (!usernameCheck) return {
-			status: "failed",
-			content: "Username or password is wrong.",
-			statusCode: 400
-		};
-
-		let [_, userInfo] = await Promise.all([
-			AccountLogin.AccountLoginModel.findOneAndUpdate({ userName: userName }, { lastLoginDateTime: new Date() }),
-			UserInfo.UserInfoModel.findById(usernameCheck.userId.toString())
-		]);
-
-		usernameCheck._doc.userInfo = userInfo;
-		
-		if (!(await bcrypt.compare(password, usernameCheck.password))) return {
-			status: "failed",
-			content: `userName and password must be filled.`,
-			statusCode: 400
-		};
-		
-
-   		const token = jwt.sign(usernameCheck.toJSON(), process.env.secret_key, {
-            expiresIn: 1000
-        });
-
-        const { iat, exp } = jwt.decode(token);
-
-		return {
-			status: "success",
-			content: {
-				token: token,
-				iat: iat,
-				exp: exp,
-			},
-			statusCode: 201
-		};
+	
+			await redisClient.connect();
+			await redisClient.set(
+				`userInfo:${userInfo._id}`,
+				`{"fullName": "${userInfo.fullName}","accountNumber": "${userInfo.accountNumber}","emailAddress": "${userInfo.emailAddress}", "registrationNumber": "${userInfo.registrationNumber}"}`,
+				'EX',
+				new Date().setHours(1) / 1000
+			);
+			await redisClient.disconnect();
+	
+	   		const token = jwt.sign(usernameCheck.toJSON(), process.env.secret_key, {
+	            expiresIn: 1000
+	        });
+	
+	        const { iat, exp } = jwt.decode(token);
+	
+			return {
+				status: "success",
+				content: {
+					token: token,
+					iat: iat,
+					exp: exp,
+				},
+				statusCode: 201
+			};
+		} catch(e) {
+			console.log(e);
+			return {
+				status: "failed",
+				content: e.message,
+				statusCode: 500
+			}
+		}
 	}
 }
 

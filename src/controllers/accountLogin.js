@@ -1,6 +1,7 @@
 const AccountLogin = require('../models/accountLogin');
 
 class AccountLoginController {
+	// Get account login by lastLoginDateTime > 3 days
 	static async getAccountLoginByLastLoginDate() {
 		
 		console.log(new Date((new Date()).setDate(new Date().getDate() - 4)));

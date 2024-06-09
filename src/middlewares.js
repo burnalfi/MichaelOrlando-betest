@@ -11,7 +11,9 @@ async function verifyToken (req, res, next) {
     console.log(Math.floor(new Date().getTime() / 1000) > decodedToken.exp);
   
     if (Math.floor(new Date().getTime() / 1000) > decodedToken.exp) return res.status(403).json({ status: "failed", content: "Bearer token expired." });
-  
+    
+    req.user = decodedToken;
+    
     next();
   } catch (e) {
     return res.status(403).json({

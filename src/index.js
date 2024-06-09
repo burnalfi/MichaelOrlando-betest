@@ -6,6 +6,7 @@ const AccountLoginRoute = require('./routes/accountLogin');
 const Middleware = require('./middlewares');
 const http =  require("http");
 const cors = require('cors');
+
 require('dotenv').config();
 
 const app = express();
@@ -37,6 +38,8 @@ server.listen(port, '0.0.0.0', () => {
 		.catch((err) => {
 			console.error(err.message);
 		});
+
+	console.log()
 
 	console.log(`App is running on port ${port}!`);
 });

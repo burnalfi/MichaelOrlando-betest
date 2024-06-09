@@ -3,11 +3,12 @@ const UserInfoMod = require('../models/userInfo');
 const AccountLoginMod = require('../models/accountLogin');
 const mongoose = require('mongoose');
 const uuid = require('uuid');
+require('dotenv').config();
 
 const userInfoController = UserInfo.UserInfoController;
 
 mongoose
-	.connect(`mongodb://127.0.0.1:27017/db_MichaelOrlando_betest`)
+	.connect(process.env.dbUrl)
 	.then(() => {
 		console.log('Database connection established.');
 	})
@@ -28,7 +29,7 @@ test.concurrent("Get user info by it's account number", async () => {
 		accountNumber: accountLogin._id
 	});
 
-	let testCase = await userInfoController.getUserInfoByAccountNumber("6664add17615663fa17ca8dd");
+	let testCase = await userInfoController.getUserInfoByAccountNumber(userInfo.accountNumber);
 
 	expect(testCase.status).toMatch("success");
 	expect(testCase.content).toBeDefined();
@@ -48,7 +49,7 @@ test.concurrent("Get user info by it's registration number", async () => {
 	});
 
 	
-	let testCase = await userInfoController.getUserInfoByRegistrationNumber('1e990008-c547-4b6e-b769-6967d657f248');
+	let testCase = await userInfoController.getUserInfoByRegistrationNumber(userInfo.registrationNumber);
 
 	expect(testCase.status).toMatch("success");
 	expect(testCase.content).toBeDefined();

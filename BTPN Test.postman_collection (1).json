@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "f98980e0-84d0-40e4-a0a1-ff53b0041ccb",
+		"name": "BTPN Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7802464"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"user020\",\r\n    \"password\": \"password123\",\r\n    \"fullName\": \"Micah Parson\",\r\n    \"emailAddress\": \"email123@email.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ms-michaelorlando-betest.adaptable.app/account/register",
+					"protocol": "https",
+					"host": [
+						"ms-michaelorlando-betest",
+						"adaptable",
+						"app"
+					],
+					"path": [
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"user020\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/account/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Info by Account Number",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzZXIwMjAiLCJwYXNzd29yZCI6IiQyYiQxMCRtcnJGN2RZWnNHQjhMZGpLdDd1YWRPM2Q2U1k2Rm4ud2YzaUdjRkhjcjdjUzAwajJ6S1lLMiIsInVzZXJJZCI6IjY2NjU3MDFmOWZlNzUyOWYzNmUxMWQwMyIsInVzZXJJbmZvIjp7ImZ1bGxOYW1lIjoiTWljYWggUGFyc29uIiwiZW1haWxBZGRyZXNzIjoiZW1haWwxMjNAZW1haWwuY29tIiwicmVnaXN0cmF0aW9uTnVtYmVyIjoiZDU2ODk3MjgtNmFjZC00YmQxLTkzYzItYTg0NWE4NDFmZDI4IiwiYWNjb3VudE51bWJlciI6IjY2NjU3MDFmOWZlNzUyOWYzNmUxMWQwMiIsImlkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAzIiwidXNlcklkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAzIn0sImlkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAyIiwiYWNjb3VudElkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAyIiwiaWF0IjoxNzE3OTIzODc3LCJleHAiOjE3MTc5MjQ4Nzd9.tYkMJMgWUEkiZJUYTxytV7-UURbk04CPtdscIVBKR9o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ms-michaelorlando-betest.adaptable.app/user-info/account-number/66647535eedc0242b268e8c1",
+					"protocol": "https",
+					"host": [
+						"ms-michaelorlando-betest",
+						"adaptable",
+						"app"
+					],
+					"path": [
+						"user-info",
+						"account-number",
+						"66647535eedc0242b268e8c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Info by Registration Number",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzZXIwMjAiLCJwYXNzd29yZCI6IiQyYiQxMCRtcnJGN2RZWnNHQjhMZGpLdDd1YWRPM2Q2U1k2Rm4ud2YzaUdjRkhjcjdjUzAwajJ6S1lLMiIsInVzZXJJZCI6IjY2NjU3MDFmOWZlNzUyOWYzNmUxMWQwMyIsInVzZXJJbmZvIjp7ImZ1bGxOYW1lIjoiTWljYWggUGFyc29uIiwiZW1haWxBZGRyZXNzIjoiZW1haWwxMjNAZW1haWwuY29tIiwicmVnaXN0cmF0aW9uTnVtYmVyIjoiZDU2ODk3MjgtNmFjZC00YmQxLTkzYzItYTg0NWE4NDFmZDI4IiwiYWNjb3VudE51bWJlciI6IjY2NjU3MDFmOWZlNzUyOWYzNmUxMWQwMiIsImlkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAzIiwidXNlcklkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAzIn0sImlkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAyIiwiYWNjb3VudElkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAyIiwiaWF0IjoxNzE3OTIzODc3LCJleHAiOjE3MTc5MjQ4Nzd9.tYkMJMgWUEkiZJUYTxytV7-UURbk04CPtdscIVBKR9o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ms-michaelorlando-betest.adaptable.app/user-info/registration-number/4d6c20eb-34f2-460b-bd76-44f7f0d6916c",
+					"protocol": "https",
+					"host": [
+						"ms-michaelorlando-betest",
+						"adaptable",
+						"app"
+					],
+					"path": [
+						"user-info",
+						"registration-number",
+						"4d6c20eb-34f2-460b-bd76-44f7f0d6916c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account Login by Last Login Date",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzZXIwMjAiLCJwYXNzd29yZCI6IiQyYiQxMCRtcnJGN2RZWnNHQjhMZGpLdDd1YWRPM2Q2U1k2Rm4ud2YzaUdjRkhjcjdjUzAwajJ6S1lLMiIsInVzZXJJZCI6IjY2NjU3MDFmOWZlNzUyOWYzNmUxMWQwMyIsInVzZXJJbmZvIjp7ImZ1bGxOYW1lIjoiTWljYWggUGFyc29uIiwiZW1haWxBZGRyZXNzIjoiZW1haWwxMjNAZW1haWwuY29tIiwicmVnaXN0cmF0aW9uTnVtYmVyIjoiZDU2ODk3MjgtNmFjZC00YmQxLTkzYzItYTg0NWE4NDFmZDI4IiwiYWNjb3VudE51bWJlciI6IjY2NjU3MDFmOWZlNzUyOWYzNmUxMWQwMiIsImlkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAzIiwidXNlcklkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAzIn0sImlkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAyIiwiYWNjb3VudElkIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAyIiwiaWF0IjoxNzE3OTIzODc3LCJleHAiOjE3MTc5MjQ4Nzd9.tYkMJMgWUEkiZJUYTxytV7-UURbk04CPtdscIVBKR9o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ms-michaelorlando-betest.adaptable.app/account-login/login-time",
+					"protocol": "https",
+					"host": [
+						"ms-michaelorlando-betest",
+						"adaptable",
+						"app"
+					],
+					"path": [
+						"account-login",
+						"login-time"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Info by Session",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzZXIwMjAiLCJwYXNzd29yZCI6IiQyYiQxMCRtcnJGN2RZWnNHQjhMZGpLdDd1YWRPM2Q2U1k2Rm4ud2YzaUdjRkhjcjdjUzAwajJ6S1lLMiIsInVzZXJJZCI6IjY2NjU3MDFmOWZlNzUyOWYzNmUxMWQwMyIsImxhc3RMb2dpbkRhdGVUaW1lIjoiMjAyNC0wNi0wOVQxOTo1NDozOC4yNjFaIiwidXNlckluZm8iOnsiZnVsbE5hbWUiOiJNaWNhaCBQYXJzb24iLCJlbWFpbEFkZHJlc3MiOiJlbWFpbDEyM0BlbWFpbC5jb20iLCJyZWdpc3RyYXRpb25OdW1iZXIiOiJkNTY4OTcyOC02YWNkLTRiZDEtOTNjMi1hODQ1YTg0MWZkMjgiLCJhY2NvdW50TnVtYmVyIjoiNjY2NTcwMWY5ZmU3NTI5ZjM2ZTExZDAyIiwiaWQiOiI2NjY1NzAxZjlmZTc1MjlmMzZlMTFkMDMiLCJ1c2VySWQiOiI2NjY1NzAxZjlmZTc1MjlmMzZlMTFkMDMifSwiaWQiOiI2NjY1NzAxZjlmZTc1MjlmMzZlMTFkMDIiLCJhY2NvdW50SWQiOiI2NjY1NzAxZjlmZTc1MjlmMzZlMTFkMDIiLCJpYXQiOjE3MTc5NjMwMzMsImV4cCI6MTcxNzk2NDAzM30.SrCTPnoJ9wtnckAR4vfIblCBYkiq4o0vjrrGLuM5lm0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/user-info/session",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"user-info",
+						"session"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

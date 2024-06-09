@@ -2,11 +2,12 @@ const AccountLoginMod = require('../models/accountLogin');
 const AccountLoginCont = require('../controllers/accountLogin');
 const mongoose = require('mongoose');
 const uuid = require('uuid');
+require('dotenv').config();
 
 const accountLoginController = AccountLoginCont.AccountLoginController;
 
 mongoose
-	.connect(`mongodb://127.0.0.1:27017/db_MichaelOrlando_betest`)
+	.connect(process.env.dbUrl)
 	.then(() => {
 		console.log('Database connection established.');
 	})
